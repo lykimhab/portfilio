@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const projects = {
                 '1': {
                 title: "Khmer News App",
-                image: "/image/p1.png",
+                image: "/myportfolio/image/p1.png",
                 imageAlt: "E-commerce screenshot",
                 description: "Full-stack online store with secure payments",
                 languages: [ ],
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         '2': {
             title: "Booking  Salon",
-            image: "/image/p5.png",
+            image: "/myportfolio/image/p5.png",
             imageAlt: "Task app screenshot",
             description: "Team task tracking with real-time updates",
             languages: [ ],
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '3': {
             title: "Movie App",
-            image: "/image/p2.png",
+            image: "/myportfolio/image/p2.png",
             imageAlt: "CLI tool screenshot",
             description: "Automate Python development tasks",
             languages: [],
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '4': {
             title: "Inventory and  Invoice  management system ",
-            image: "/image/p6.png",
+            image: "/myportfolio/image/p6.png",
             imageAlt: "Portfolio screenshot",
             description: "Responsive portfolio showcasing projects",
             languages: ['fab fa-js', 'fab fa-html5', 'fab fa-css3-alt','fab fa-python'],
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '5': {
             title: "Clone Website Zando",
-            image: "/image/p7.png",
+            image: "/myportfolio/image/p7.png",
             imageAlt: "Chat app screenshot",
             description: "Instant messaging with WebSocket",
             languages: ['fab fa-js', 'fab fa-html5', 'fab fa-css3-alt'],
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '6': {
             title: "Ahsora Wprld UX/UI(FIGMA)",
-            image: "/image/p3.png",
+            image: "/myportfolio/image/p3.png",
             imageAlt: "API screenshot",
             description: "Scalable API for mobile apps",
             languages: ['fab fa-figma'],
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
           '7': {
             title: "Khmer Streaming Music Website",
-            image: "/image/p3.png",
+            image: "/myportfolio/image/p3.png",
             imageAlt: "API screenshot",
             description: "Scalable API for mobile apps",
            languages: ['fab fa-js', 'fab fa-html5', 'fab fa-css3-alt'],
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
            '8': {
             title: "Pet Shop Website",
-            image: "/image/p3.png",
+            image: "/myportfolio/image/p3.png",
             imageAlt: "API screenshot",
             description: "Scalable API for mobile apps",
             languages: ['fab fa-js', 'fab fa-html5', 'fab fa-css3-alt'],
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
          '9': {
             title: "Khmer Food Website UX/UI(FIGMA)",
-            image: "/image/p3.png",
+            image: "/myportfolio/image/p3.png",
             imageAlt: "API screenshot",
             description: "Scalable API for mobile apps",
             languages: ['fab fa-figma'],
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
          '10': {
             title: "Emergency Service App UX/UI(FIGMA)",
-            image: "/image/p3.png",
+            image: "/myportfolio/image/p3.png",
             imageAlt: "API screenshot",
             description: "Scalable API for mobile apps",
             languages: ['fab fa-figma'],
