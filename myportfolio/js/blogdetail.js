@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const posts = {
         '1': {
             title: "Wintech Cambodia",
-            image: "/image/winteach.jpg",
+            image: "/myportfolio/image/winteach.jpg",
             imageAlt: "Coding setup",
             author: "Ly Kimhab",
             date: "5 February 2024",
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '2': {
             title: "LY Kun MEDIA",
-            image: "/image/likun.jpg",
+            image: "/myportfolio/image/likun.jpg",
             imageAlt: "Developer profile",
             author: "Ly Kimhab",
             date: "June 22, 2022",
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '3': {
             title: "First Cambodia",
-            image: "/image/firstcambodia.jpg",
+            image: "/myportfolio/image/firstcambodia.jpg",
             imageAlt: "Python code",
             author: "Ly Kimhab",
             date: "24 April 2023",
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
          '4': {
             title: " Chief (Cambodia) Commercial Bank Plc",
-            image: "/image/chiefbank.jpg",
+            image: "/myportfolio/image/chiefbank.jpg",
             imageAlt: "Python code",
             author: "Ly Kimhab",
             date: "August 21, 2023",
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
           '5': {
             title: "Beltei International School",
-            image: "/image/b15.jpg",
+            image: "/myportfolio/image/b15.jpg",
             imageAlt: "Python code",
             author: "Ly Kimhab",
             date: "October 5, 2022",
