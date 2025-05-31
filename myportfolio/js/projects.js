@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: "Scalable API for mobile apps",
             languages: ['fab fa-js', 'fab fa-html5', 'fab fa-css3-alt'],
             built: [],
-            github: ""
+            github: "https://github.com/lykimhab/music-webiste"
         },
         '8': {
             title: "Pet Shop Website",
