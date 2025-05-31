@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             author: "Ly Kimhab",
             date: "June 22, 2022",
             content: `
-               <p class="mb-4">Join Ly Kun Media in Phnom Penh, Cambodia, for an intensive 7-day training program designed to equip you with essential skills in UI/UX design and frontend development. This hands-on course guides you through creating user-centric interfaces and building dynamic web applications, inspired by projects like the Khmer News App, using tools like Figma, Adobe XD, HTML, CSS, JavaScript, React, and Vite.</p>
+               <p class="mb-4">Join Ly Kun Media in Phnom Penh, Cambodia, for an intensive 7-day training program designed to equip you with essential skills in UI/UX design and frontend development. This hands-on course guides you through creating user-centric interfaces and building dynamic web applications, inspired by projects like the website, using tools like Figma, Adobe XD, HTML, CSS, JavaScript, React, and Vite.</p>
                 <h2 class="font-orbitron text-primary text-lg mb-3">Program Overview</h2>
                 <p class="mb-4">Led by Ly Kun Media’s experienced instructors, this training combines design and coding to prepare you for a career in frontend development and UI/UX design. Each day builds toward a final project, ensuring practical, industry-relevant skills.</p>
                 <ul class="list-disc pl-5 mb-4">
