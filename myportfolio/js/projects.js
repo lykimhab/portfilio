@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: "Full-stack online store with secure payments",
             languages: [],
             built: ['fas fa-database', 'fab fa-flutter', 'fab fa-firebase'],
-            github: "https://github.com/kimhab/ecommerce-platform",
+            // github: "https://github.com/kimhab/ecommerce-platform",
             hosting: "https://homeworkauth-6ba05.web.app/"
         },
         '2': {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: "Team task tracking with real-time updates",
             languages: [],
             built: ['fas fa-database', 'fab fa-flutter', 'fab fa-firebase'],
-            github: "https://github.com/kimhab/task-manager",
+            github: "https://github.com/lykimhab/bookingsalon",
             hosting: "https://kimhablogin.web.app/",
             demo: "https://www.facebook.com/share/v/1G7uRoQRPr/?mibextid=wwXIfr"
         },
