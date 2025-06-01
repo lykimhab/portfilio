@@ -152,14 +152,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.warn(`Built container not found for project ID: ${projectId}`);
             }
 
-            // Populate links with red icons, only showing available links
+            // Populate links with appropriate icons, only showing available links
             const linksContainer = card.querySelector('.links');
             if (linksContainer) {
                 let linksHTML = '';
                 if (project.github) {
+                    const isFigmaLink = project.github.includes('figma.com');
                     linksHTML += `
                         <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="text-primary flex items-center gap-2 hover:underline transition-all duration-300">
-                            <i class="fab fa-github text-lg"></i> Source Code
+                            <i class="${isFigmaLink ? 'fab fa-figma' : 'fab fa-github'} text-lg"></i> ${isFigmaLink ? 'Figma Design' : 'Source Code'}
                         </a>
                     `;
                 }
