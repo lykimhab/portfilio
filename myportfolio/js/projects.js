@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: "Scalable API for mobile apps",
             languages: ['fab fa-js', 'fab fa-html5', 'fab fa-css3-alt'],
             built: [],
-            github: "https://www.figma.com/design/BSv6uIXQxmKU4oQ7so1wOh/Tshirtproject?node-id=0-1&p=f&t=Nnd8AR4Uj8W1rkCB-0"
+            github: "https://github.com/lykimhab/Frontend_PetShop"
         },
         '9': {
             title: "Khmer Food Website UX/UI(FIGMA)",
