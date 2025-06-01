@@ -118,6 +118,15 @@ document.addEventListener('DOMContentLoaded', () => {
             built: [],
             github: "https://www.figma.com/design/2m8xEiEF1y0zAtQVqgyivU/emergency-app?node-id=0-1&p=f&t=0BVqSo0NlRvBracy-0"
         },
+         '11': {
+            title: "Shoes Shop App UX/UI(FIGMA)",
+            image: "/myportfolio/image/p12.png",
+            imageAlt: "API screenshot",
+            description: "Scalable API for mobile apps",
+            languages: ['fab fa-figma'],
+            built: [],
+            github: "https://www.figma.com/design/XqebIhULaFnYb1luWh0YRs/teamfigma?node-id=0-1&p=f&t=bQWCBcAf8ieMTjrf-0"
+        },
     };
 
     // Populate project cards
