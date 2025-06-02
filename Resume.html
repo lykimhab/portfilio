@@ -84,6 +84,7 @@
                 );
                 transform: rotate(30deg);
                 transition: all 0.6s ease;
+                pointer-events: none;
             }
             .card:hover::before {
                 transform: rotate(30deg) translate(20%, 20%);
@@ -186,7 +187,6 @@
             <div class="social-links flex justify-center gap-4 my-5 animate-slide-in-left">
                <a href="https://www.facebook.com/share/1BRS7N4Gxc/?mibextid=wwXIfr" class="social-link text-light text-xl transition-all duration-300 hover:text-primary hover:-translate-y-1"><i class="fab fa-facebook"></i></a>
                 <a href="#" class="social-link text-light text-xl transition-all duration-300 hover:text-primary hover:-translate-y-1"><i class="fab fa-linkedin-in"></i></a>
-               
                 <a href="#" class="social-link text-light text-xl transition-all duration-300 hover:text-primary hover:-translate-y-1"><i class="fab fa-medium-m"></i></a>
             </div>
             
@@ -210,11 +210,12 @@
                 <a href="Resume.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">Resume</a>
                 <a href="Projects.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">Projects</a>
                 <a href="Blog.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">Blog</a>
+                <a href="certificate.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">Certificates</a>
             </div>
             
             <!-- Download CV Button -->
-            <div class="mb-8 text-center animate-fade-in">
-                <a href="/myportfolio/image/Ly kimhabCV.pdf" download class="inline-block py-3 px-6 bg-primary text-light font-orbitron text-sm uppercase tracking-wider rounded-lg shadow-lg transition-all duration-300 hover:bg-danger hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(255,0,0,0.5)]">
+            <div class="mb-6 text-center animate-fade-in">
+                <a href="/myportfolio/image/LyKimhabCV.pdf" download class="inline-block py-3 px-6 bg-primary text-light font-orbitron text-sm uppercase tracking-wider rounded-lg shadow-lg transition-all duration-300 hover:bg-danger hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(255,0,0,0.5)]">
                     <i class="fas fa-download mr-2"></i> Download CV
                 </a>
             </div>
@@ -224,14 +225,20 @@
                 <h3 class="font-orbitron text-primary text-xl mt-0 mb-4 relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-12 after:h-0.5 after:bg-primary">Background</h3>
                 <div class="terminal-text font-robotoMono leading-relaxed mb-4">
                     <p><span class="text-success mr-3">$</span> <span class="text-info">whoami</span></p>
-                    <p>I am a passionate Web and Mobile App Developer based in Phnom Penh, Cambodia, with a strong foundation in crafting user-friendly and efficient applications. My journey in tech began with a curiosity for creating seamless digital experiences, leading me to specialize in web development with React and JavaScript, and mobile app development with Flutter react native and Dart.</p>
+                    <p>I am a passionate Web and Mobile App Developer based in Phnom Penh, Cambodia, with a strong foundation in crafting user-friendly and efficient applications. My journey in tech began with a curiosity for creating seamless digital experiences, leading me to specialize in web development with React and JavaScript, and mobile app development with Flutter, React Native, and Dart.</p>
                     <p>Driven by a desire to deliver high-quality, scalable solutions, I leverage tools like Figma for UI/UX design and Firebase for backend integration to build impactful web and mobile apps. My work is inspired by the belief that technology can enhance user experiences and streamline processes for audiences worldwide.</p>
                 </div>
             </div>
             
             <!-- Education Section -->
             <div class="card card-bg p-6 mb-8 rounded-xl shadow-lg border border-white/5 transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:shadow-xl animate-fade-in">
-                <h3 class="font-orbitron text-primary text-xl mt-0 mb-4 relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-12 after:h-0.5 after:bg-primary">Education</h3>
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-orbitron text-primary text-xl mt-0 relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-12 after:h-0.5 after:bg-primary">Education</h3>
+                    <a href="./Certificates.html" class="text-primary font-orbitron text-sm uppercase tracking-wider flex items-center gap-2 transition-all duration-300 hover:underline hover:shadow-[0_0_10px_rgba(255,0,0,0.2)]">
+                        <i class="fas fa-arrow-right text-xs transition-transform duration-300 hover:translate-x-1"></i>
+                        See more
+                    </a>
+                </div>
                 <div class="education-grid space-y-6">
                     <div class="education-item">
                         <h4 class="text-light text-lg mb-2">Bachelor of Science in Computer Science</h4>
@@ -249,21 +256,23 @@
                         <ul class="list-disc list-inside text-medium text-sm">
                             <li><a href="https://www.udemy.com/course/flutter-dart-the-complete-guide/" class="text-primary hover:underline">Flutter & Dart: The Complete Beginners Guide [2025]</a> on 03/10/2025 as taught by Dastagir Ahmed</li>
                             <li><a href="https://www.udemy.com/course/learn-flutter-getx/" class="text-primary hover:underline">Learn Flutter GetX Course 2024</a> on 01/04/2025 as taught by Mostafa Aboads on Udemy</li>
-                            <li><a href="https://www.edx.org/course/full-stack-web-development-with-react" class="text-primary hover:underline"> Built Complete Flutter App & Upload in AppStore on 02/08/2025 as taught by ARUNNACHALAM SHANMUGARAAJAN on Udemy</a></li>
-                            <li><a href="#" class="text-primary hover:underline"> Flutter Bootcamp: Build Crypto Tracker Application on 02/05/2025 as taught by Sanjay Kumar Das on Udemy</a> (Coursera, 2025)</li>
-                            <li><a href="#" class="text-primary hover:underline">  Dart & Flutter | The Complete Flutter Development Course on 06/25/2024 as taught by Hussain Mustafa</a> (Coursera, 2024)</li>
-                            <li><a href="#" class="text-primary hover:underline">  Flutter SQLite Database with full project on 09/18/2024 as taught by Mostafa Aboads on Udemy</a> (Coursera, 2024)</li>
-                            <li><a href="#" class="text-primary hover:underline">  Figma for User Interface and User Experience UIUX Design on 12/11/2024 as taught by Sayman Creative Institute on Udemy.</a> (Coursera, 2024)</li>
-                            <li><a href="#" class="text-primary hover:underline">   Javascript For Beginners Complete Course on 12/08/2023 as taught by PROPER DOT INSTITUTE on Udemy.</a> (Coursera, 2023)</li>
-                            <li><a href="#" class="text-primary hover:underline">   Java for Beginners - Learn all the Basics of Java on 10/27/2023 as taught by Yassin Marco MBA on Udemy</a> (Coursera, 2023)</li>
-                            <li><a href="#" class="text-primary hover:underline">   Build laravel apps fast with blueprint on 12/08/2023 as taught by Hazem nassar on Udemy</a> (Coursera, 2023)</li>
+                            <li><a href="https://www.edx.org/course/full-stack-web-development-with-react" class="text-primary hover:underline">Built Complete Flutter App & Upload in AppStore on 02/08/2025 as taught by ARUNNACHALAM SHANMUGARAAJAN on Udemy</a></li>
+                            <li><a href="#" class="text-primary hover:underline">Flutter Bootcamp: Build Crypto Tracker Application on 02/05/2025 as taught by Sanjay Kumar Das on Udemy</a> (Coursera, 2025)</li>
+                            <li><a href="#" class="text-primary hover:underline">Dart & Flutter | The Complete Flutter Development Course on 06/25/2024 as taught by Hussain Mustafa</a> (Coursera, 2024)</li>
+                            <li><a href="#" class="text-primary hover:underline">Flutter SQLite Database with full project on 09/18/2024 as taught by Mostafa Aboads on Udemy</a> (Coursera, 2024)</li>
+                            <li><a href="#" class="text-primary hover:underline">Figma for User Interface and User Experience UIUX Design on 12/11/2024 as taught by Sayman Creative Institute on Udemy</a> (Coursera, 2024)</li>
+                            <li><a href="#" class="text-primary hover:underline">Javascript For Beginners Complete Course on 12/08/2023 as taught by PROPER DOT INSTITUTE on Udemy</a> (Coursera, 2023)</li>
+                            <li><a href="#" class="text-primary hover:underline">Java for Beginners - Learn all the Basics of Java on 10/27/2023 as taught by Yassin Marco MBA on Udemy</a> (Coursera, 2023)</li>
+                            <li><a href="#" class="text-primary hover:underline">Build Laravel Apps Fast with Blueprint on 12/08/2023 as taught by Hazem Nassar on Udemy</a> (Coursera, 2023)</li>
                         </ul>
                     </div>
                 </div>
             </div>
+            
+            <!-- Education Online Section -->
             <div class="card card-bg p-6 mb-8 rounded-xl shadow-lg border border-white/5 transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:shadow-xl animate-fade-in">
                 <h3 class="font-orbitron text-primary text-xl mt-0 mb-4 relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-12 after:h-0.5 after:bg-primary">Education Online</h3>
-                <div class="volunteer-grid spaceney-6">
+                <div class="volunteer-grid space-y-6">
                     <div class="volunteer-item">
                         <h4 class="text-light text-lg mb-2">Mobile App Development with Dart and Laravel</h4>
                         <p class="text-medium text-sm mb-2">Salait Online Learning Platform, Remote</p>
@@ -301,7 +310,7 @@
                     <div class="work-item">
                         <h4 class="text-light text-lg mb-2">Frontend Development and Designer Trainee</h4>
                         <p class="text-medium text-sm mb-2">Ly Kun Media, Phnom Penh</p>
-                        <p class="text-medium text-sm mb-2">June 22, 2022,June 28, 2022,</p>
+                        <p class="text-medium text-sm mb-2">June 22, 2022 to June 28, 2022</p>
                         <ul class="list-disc list-inside text-medium text-sm">
                             <li>Participated in a training program, creating responsive web interfaces using React, JavaScript, and Tailwind CSS for a media platform.</li>
                             <li>Designed UI/UX wireframes with Figma.</li>
@@ -311,7 +320,7 @@
                     <div class="work-item">
                         <h4 class="text-light text-lg mb-2">Full-Stack Development Trainee</h4>
                         <p class="text-medium text-sm mb-2">First Cambodia, Phnom Penh</p>
-                        <p class="text-medium text-sm mb-2">April 24, 2023 to  April 30, 2023</p>
+                        <p class="text-medium text-sm mb-2">April 24, 2023 to April 30, 2023</p>
                         <ul class="list-disc list-inside text-medium text-sm">
                             <li>Engaged in a training program, developing a web application with C# and ASP.NET Core, integrated with SQL Server.</li>
                             <li>Built responsive frontend components using React and Bootstrap, focusing on user-friendly interfaces.</li>
@@ -331,9 +340,9 @@
                     <div class="work-item">
                         <h4 class="text-light text-lg mb-2">Web and Mobile App Development Trainee</h4>
                         <p class="text-medium text-sm mb-2">Wintech Cambodia, Phnom Penh</p>
-                        <p class="text-medium text-sm mb-2">February 5, 2024,February 11, 2024</p>
+                        <p class="text-medium text-sm mb-2">February 5, 2024 to February 11, 2024</p>
                         <ul class="list-disc list-inside text-medium text-sm">
-                            <li>focuses on building a modern e-commerce web application, such as a Shirt Shop, using PHP, JavaScript, React, Laravel, and Figma for UX/UI design.</li>
+                            <li>Focused on building a modern e-commerce web application, such as a Shirt Shop, using PHP, JavaScript, React, Laravel, and Figma for UX/UI design.</li>
                             <li>Developed RESTful APIs with Laravel and integrated Firebase for real-time data, improving app performance.</li>
                             <li>Designed user interfaces with Figma, focusing on intuitive UX for media applications.</li>
                         </ul>
@@ -369,6 +378,7 @@
                 tab.classList.add('active');
             });
         });
+
         // Set active tab based on current page
         document.addEventListener('DOMContentLoaded', () => {
             const tabs = document.querySelectorAll('.tab');

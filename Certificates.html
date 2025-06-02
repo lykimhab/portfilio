@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ly Kimhab | Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff0000',
+                        secondary: '#9c27b0',
+                        dark: '#0a0a1a',
+                        darkAccent: '#1a1a2a',
+                        light: '#e0e0ff',
+                        medium: '#444455',
+                        success: '#4caf50',
+                        info: '#2196f3',
+                        warning: '#ff9800',
+                        danger: '#f44336',
+                    },
+                    fontFamily: {
+                        orbitron: ['Roboto Mono', 'sans-serif'],
+                        robotoMono: ['Roboto Mono', 'monospace'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-in-left': 'slideInLeft 0.8s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-20px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        pulse: {
+                            '0%': { transform: 'translate(-50%, -50%) scale(1)', opacity: '1' },
+                            '50%': { transform: 'translate(-50%, -50%) scale(1.3)', opacity: '0.7' },
+                            '100%': { transform: 'translate(-50%, -50%) scale(1)', opacity: '1' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .gradient-bg {
+                background: linear-gradient(135deg, theme('colors.dark'), theme('colors.darkAccent'));
+            }
+            .card-bg {
+                background: linear-gradient(135deg, rgba(26, 26, 42, 0.8), rgba(34, 34, 51, 0.8));
+            }
+            .card::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(
+                    to bottom right,
+                    transparent,
+                    transparent,
+                    transparent,
+                    rgba(255, 0, 0, 0.1)
+                );
+                transform: rotate(30deg);
+                transition: all 0.6s ease;
+                pointer-events: none;
+            }
+            .card:hover::before {
+                transform: rotate(30deg) translate(20%, 20%);
+            }
+            /* Custom Scrollbar */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #000000;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #ff0000;
+                border-radius: 4px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #cc0000;
+            }
+            /* Firefox Scrollbar */
+            * {
+                scrollbar-width: thin;
+                scrollbar-color: #ff0000 #000000;
+            }
+            /* Smooth Scroll */
+            .content {
+                scroll-behavior: smooth;
+            }
+        }
+    </style>
+</head>
+<body class="gradient-bg text-light font-robotoMono m-0 p-0 min-h-screen overflow-x-hidden">
+    <div class="container max-w-6xl mx-auto my-5 bg-darkAccent/95 rounded-xl shadow-xl overflow-hidden min-h-[calc(100vh-40px)]">
+        <!-- Main Content -->
+        <div class="content p-4 md:p-8 bg-dark/95 relative overflow-y-auto max-h-screen">
+            <!-- Navigation Tabs -->
+            <div class="tabs flex flex-wrap gap-3 mb-8 border-b border-primary/20 pb-3">
+                <a href="./index.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">About</a>
+                <a href="./Resume.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg bg-primary/10 text-primary">Resume</a>
+                <a href="./Projects.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">Projects</a>
+                <a href="./Blog.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">Blog</a>
+                <a href="./certificate.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">Certificates</a>
+            </div>
+            
+            <!-- Resume Section -->
+            <div class="card card-bg p-6 rounded-xl shadow-lg border border-white/5 transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:shadow-xl animate-fade-in">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="min-w-[150px]">
+                        <a href="./Resume.html" class="text-primary font-orbitron text-sm uppercase tracking-wider flex items-center gap-2 transition-all duration-300 hover:underline hover:shadow-[0_0_10px_rgba(255,0,0,0.2)] relative z-10">
+                            <i class="fas fa-arrow-left text-xs transition-transform duration-300 hover:-translate-x-1"></i>
+                            Back to Home
+                        </a>
+                    </div>
+                    <h1 class="font-orbitron text-primary text-2xl md:text-3xl mt-0 text-center flex-1">Certifications</h1>
+                    <div class="w-32"></div> <!-- Spacer for balance -->
+                </div>
+                <div class="resume-content font-robotoMono leading-relaxed text-light/90">
+                    <div class="certificates-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
+                        <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
+                            <div class="h-60 overflow-hidden">
+                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-8f782675-254b-439b-99a7-fabc5eaf8636.jpg?v=1741607237000" 
+                                     alt="Wintech Cambodia Certificate" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="m-0 mb-2 text-light text-lg">Course Flutter & Dart</h4>
+                                <p class="m-0 text-medium text-sm mb-4"> Flutter & Dart : The complete beginners guide [2025] on 03/10/2025</p>
+                                <a href="https://www.udemy.com/certificate/UC-8f782675-254b-439b-99a7-fabc5eaf8636/" class="text-primary text-sm font-medium flex items-center hover:underline">
+                                    View Details
+                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
+                            <div class="h-40 overflow-hidden">
+                                <img src="/myportfolio/image/likun.jpg" 
+                                     alt="LY Kun MEDIA Certificate" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="m-0 mb-2 text-light text-lg">LY Kun MEDIA</h4>
+                                <p class="m-0 text-medium text-sm mb-4">Certificate for frontend training at LY Kun MEDIA</p>
+                                <a href="./Blogdetail.html?id=2" class="text-primary text-sm font-medium flex items-center hover:underline">
+                                    View Details
+                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
+                            <div class="h-40 overflow-hidden">
+                                <img src="/myportfolio/image/firstcambodia.jpg" 
+                                     alt="FirstCambodia Certificate" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="m-0 mb-2 text-light text-lg">FirstCambodia</h4>
+                                <p class="m-0 text-medium text-sm mb-4">Certificate of training program completion at FirstCambodia</p>
+                                <a href="./Blogdetail.html?id=3" class="text-primary text-sm font-medium flex items-center hover:underline">
+                                    View Details
+                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
+                            <div class="h-40 overflow-hidden">
+                                <img src="/myportfolio/image/chiefbank.jpg" 
+                                     alt="Chief Bank Certificate" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="m-0 mb-2 text-light text-lg">Chief (Cambodia) Commercial Bank Plc</h4>
+                                <p class="m-0 text-medium text-sm mb-4">Certificate of training at Chief (Cambodia) Commercial Bank Plc</p>
+                                <a href="./Blogdetail.html?id=4" class="text-primary text-sm font-medium flex items-center hover:underline">
+                                    View Details
+                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
+                            <div class="h-40 overflow-hidden">
+                                <img src="https://scontent.fpnh8-3.fna.fbcdn.net/v/t39.30808-6/476647584_937277758557906_3589803106595055157_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=6YRm2-dW69sQ7kNvwEmhwG5&_nc_oc=AdkrzwpdV-oQPBHiAiML4UluGRhbp108bkLNA7VeRquasRFc3CavSUCdaxg6fOhb5U0&_nc_zt=23&_nc_ht=scontent.fpnh8-3.fna&_nc_gid=b1Le2Sk3jKJrnN1Bxbet3Q&oh=00_AfLbyVavdls5sBsL_zeUY-d3u4Kuc5_FFOB5nCN6sUP54A&oe=6838AF96" 
+                                     alt="Beltei Certificate" 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-5">
+                                <h4 class="m-0 mb-2 text-light text-lg">Beltei International School, Phnom Penh</h4>
+                                <p class="m-0 text-medium text-sm mb-4">Certificate of training and teaching at Beltei International School</p>
+                                <a href="./Blogdetail.html?id=5" class="text-primary text-sm font-medium flex items-center hover:underline">
+                                    View Details
+                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="text-center text-xs text-medium mt-8">
+                <p>© 2025 Ly Kimhab</p>
+                <p>All rights reserved</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/myportfolio/js/blogdetail.js"></script>
+</body>
+</html>
