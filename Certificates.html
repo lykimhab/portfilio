@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ly Kimhab | Resume</title>
+    <title>Ly Kimhab | Certificates</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -82,7 +82,7 @@
             }
             /* Custom Scrollbar */
             ::-webkit-scrollbar {
-                width: 8px;
+                width: 6px;
             }
             ::-webkit-scrollbar-track {
                 background: #000000;
@@ -94,222 +94,315 @@
             ::-webkit-scrollbar-thumb:hover {
                 background: #cc0000;
             }
-            /* Firefox Scrollbar */
             * {
                 scrollbar-width: thin;
                 scrollbar-color: #ff0000 #000000;
             }
-            /* Smooth Scroll */
             .content {
                 scroll-behavior: smooth;
+            }
+            .hamburger {
+                display: none;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            .hamburger div {
+                width: 25px;
+                height: 3px;
+                background: theme('colors.primary');
+                margin: 5px 0;
+                transition: all 0.3s ease;
+            }
+            .nav-menu {
+                transition: all 0.3s ease;
+            }
+            @media (max-width: 640px) {
+                .hamburger {
+                    display: block;
+                    position: fixed;
+                    top: 1rem;
+                    left: 1rem;
+                    z-index: 50;
+                }
+                .nav-menu {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: theme('colors.darkAccent');
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 40;
+                    transition: left 0.3s ease;
+                }
+                .nav-menu.active {
+                    display: flex;
+                    left: 0;
+                }
+                .hamburger.active div:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+                .hamburger.active div:nth-child(2) {
+                    opacity: 0;
+                }
+                .hamburger.active div:nth-child(3) {
+                    transform: rotate(-45deg) translate(7px, -7px);
+                }
             }
         }
     </style>
 </head>
 <body class="gradient-bg text-light font-robotoMono m-0 p-0 min-h-screen overflow-x-hidden">
-    <div class="container max-w-6xl mx-auto my-5 bg-darkAccent/95 rounded-xl shadow-xl overflow-hidden min-h-[calc(100vh-40px)]">
+    <div class="container max-w-6xl mx-auto my-4 sm:my-5 bg-darkAccent/95 rounded-xl shadow-xl overflow-hidden min-h-[calc(100vh-32px)] sm:min-h-[calc(100vh-40px)]">
+        <!-- Hamburger Menu -->
+        <div class="hamburger sm:hidden">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
         <!-- Main Content -->
-        <div class="content p-4 md:p-8 bg-dark/95 relative overflow-y-auto max-h-screen">
+        <div class="content p-2 sm:p-4 md:p-6 lg:p-8 bg-dark/95 relative overflow-y-auto max-h-screen">
             <!-- Navigation Tabs -->
-            <div class="tabs flex flex-wrap gap-3 mb-8 border-b border-primary/20 pb-3">
-                <a href="./index.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">About</a>
-                <a href="./Resume.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg bg-primary/10 text-primary">Resume</a>
-                <a href="./Projects.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">Projects</a>
-                <a href="./Blog.html" class="tab py-3 px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">Blog</a>
-               
+            <div class="nav-menu tabs flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8 border-b border-primary/20 pb-2 sm:pb-3">
+                <a href="./index.html" class="tab py-2 px-3 sm:py-3 sm:px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-xs sm:text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">About</a>
+                <a href="./Resume.html" class="tab py-2 px-3 sm:py-3 sm:px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-xs sm:text-sm relative transition-all duration-300 rounded-t-lg bg-primary/10 text-primary">Resume</a>
+                <a href="./Projects.html" class="tab py-2 px-3 sm:py-3 sm:px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-xs sm:text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">Projects</a>
+                <a href="./Blog.html" class="tab py-2 px-3 sm:py-3 sm:px-5 cursor-pointer text-medium font-orbitron uppercase tracking-wider text-xs sm:text-sm relative transition-all duration-300 rounded-t-lg hover:text-light hover:bg-white/5">Blog</a>
+                
             </div>
             
-            <!-- Resume Section -->
-            <div class="card card-bg p-6 rounded-xl shadow-lg border border-white/5 transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:shadow-xl animate-fade-in">
-                <div class="flex justify-between items-center mb-4">
-                    <div class="min-w-[150px]">
-                        <a href="./Resume.html" class="text-primary font-orbitron text-sm uppercase tracking-wider flex items-center gap-2 transition-all duration-300 hover:underline hover:shadow-[0_0_10px_rgba(255,0,0,0.2)] relative z-10">
+            <!-- Certificates Section -->
+            <div class="card card-bg p-4 sm:p-6 rounded-xl shadow-lg border border-white/5 transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:shadow-xl animate-fade-in">
+                <div class="flex flex-col sm:flex-row justify-between items-center mb-4 gap-2 sm:gap-0">
+                    <div class="min-w-[120px] sm:min-w-[150px]">
+                        <a href="./MainResume.html" class="text-primary font-orbitron text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2 transition-all duration-300 hover:underline hover:shadow-[0_0_10px_rgba(255,0,0,0.2)] relative z-10">
                             <i class="fas fa-arrow-left text-xs transition-transform duration-300 hover:-translate-x-1"></i>
-                            Back
+                            Back to Resume
                         </a>
                     </div>
-                    <h1 class="font-orbitron text-primary text-2xl md:text-2xl mt-0 text-center flex-1">Certifications</h1>
-                    <div class="w-32"></div> <!-- Spacer for balance -->
+                    <h1 class="font-orbitron text-primary text-xl sm:text-2xl md:text-3xl mt-0 text-center flex-1">Certifications</h1>
+                    <div class="w-24 sm:w-32"></div> <!-- Spacer for balance -->
                 </div>
                 <div class="resume-content font-robotoMono leading-relaxed text-light/90">
-                    <div class="certificates-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
+                    <div class="certificates-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-4 sm:mt-5">
                         <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
-                            <div class="h-60 overflow-hidden">
+                            <div class="aspect-[4/3] overflow-hidden">
                                 <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-8f782675-254b-439b-99a7-fabc5eaf8636.jpg?v=1741607237000" 
-                                     alt=" Certificate" 
+                                     alt="Flutter & Dart Certificate" 
                                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                             </div>
-                            <div class="p-5">
-                                <h4 class="m-0 mb-2 text-light text-lg">Course Flutter & Dart</h4>
-                                <p class="m-0 text-medium text-sm mb-4"> Flutter & Dart : The complete beginners guide [2025] on 03/10/2025</p>
-                                <a href="https://www.udemy.com/certificate/UC-8f782675-254b-439b-99a7-fabc5eaf8636/" class="text-primary text-sm font-medium flex items-center hover:underline">
+                            <div class="p-3 sm:p-5">
+                                <h4 class="m-0 mb-2 text-light text-base sm:text-lg">Flutter & Dart</h4>
+                                <p class="m-0 text-medium text-xs sm:text-sm mb-4">Flutter & Dart: The Complete Beginners Guide [2025] on 03/10/2025</p>
+                                <a href="https://www.udemy.com/certificate/UC-8f782675-254b-439b-99a7-fabc5eaf8636/" target="_blank" class="text-primary text-xs sm:text-sm font-medium flex items-center hover:underline">
                                     View Details
                                     <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
-                            <div class="h-60 overflow-hidden">
+                            <div class="aspect-[4/3] overflow-hidden">
                                 <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-c9bcd61c-4a84-43a8-8bce-eaefea0fae32.jpg?v=1735982254000" 
-                                     alt=" Certificate" 
+                                     alt="Flutter GetX Certificate" 
                                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                             </div>
-                            <div class="p-5">
-                                <h4 class="m-0 mb-2 text-light text-lg">Learn Flutter GetX Course 2024</h4>
-                                <p class="m-0 text-medium text-sm mb-4">Learn Flutter GetX Course 2024 on 01/04/2025 as taught by Mostafa Aboads on Udemy</p>
-                                <a href="https://www.udemy.com/certificate/UC-c9bcd61c-4a84-43a8-8bce-eaefea0fae32/" class="text-primary text-sm font-medium flex items-center hover:underline">
+                            <div class="p-3 sm:p-5">
+                                <h4 class="m-0 mb-2 text-light text-base sm:text-lg">Flutter GetX Course</h4>
+                                <p class="m-0 text-medium text-xs sm:text-sm mb-4">Learn Flutter GetX Course 2024 on 01/04/2025</p>
+                                <a href="https://www.udemy.com/certificate/UC-c9bcd61c-4a84-43a8-8bce-eaefea0fae32/" target="_blank" class="text-primary text-xs sm:text-sm font-medium flex items-center hover:underline">
                                     View Details
                                     <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
-                            <div class="h-60 overflow-hidden">
+                            <div class="aspect-[4/3] overflow-hidden">
                                 <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-8f749afb-3d7c-4cec-9b70-46fb6a17b333.jpg?v=1695916745000" 
-                                     alt="Certificate" 
+                                     alt="UI/UX Figma Certificate" 
                                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                             </div>
-                            <div class="p-5">
-                                <h4 class="m-0 mb-2 text-light text-lg">UI/UX Design With Figma</h4>
-                                <p class="m-0 text-medium text-sm mb-4">UI/UX Design With Figma : 5+ Real World Projects on 09/28/2023 as taught by Chetan Pujari on Udemy</p>
-                                <a href="https://www.udemy.com/certificate/UC-8f749afb-3d7c-4cec-9b70-46fb6a17b333/" class="text-primary text-sm font-medium flex items-center hover:underline">
+                            <div class="p-3 sm:p-5">
+                                <h4 class="m-0 mb-2 text-light text-base sm:text-lg">UI/UX Design with Figma</h4>
+                                <p class="m-0 text-medium text-xs sm:text-sm mb-4">UI/UX Design with Figma: 5+ Real World Projects on 09/28/2023</p>
+                                <a href="https://www.udemy.com/certificate/UC-8f749afb-3d7c-4cec-9b70-46fb6a17b333/" target="_blank" class="text-primary text-xs sm:text-sm font-medium flex items-center hover:underline">
                                     View Details
                                     <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
-                            <div class="h-60 overflow-hidden">
-                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-6790ca8a-502d-4104-b35e-94353ced3e02.jpg?v=1739031485000" 
-                                     alt="Chief Bank Certificate" 
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div class="aspect-[4/3] overflow-hidden">
+                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-6790ca8a-502d-4104-b35e-94353ced3e02.jpg?v=1739031485000" alt="Google Flutter App Certificate" 
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                             </div>
-                            <div class="p-5">
-                                <h4 class="m-0 mb-2 text-light text-lg">Complete Google Flutter App</h4>
-                                <p class="m-0 text-medium text-sm mb-4"> Complete Google Flutter App Developed In Just 2 Hours  on 02/08/2025 as taught by ARUNNACHALAM SHANMUGARAAJAN on Udemy</p>
-                                <a href="https://www.udemy.com/certificate/UC-6790ca8a-502d-4104-b35e-94353ced3e02/" class="text-primary text-sm font-medium flex items-center hover:underline">
+                            <div class="p-3 sm:p-5">
+                                <h4 class="m-0 mb-2 text-light text-base sm:text-lg">Complete Google Flutter App</h4>
+                                <p class="m-0 text-medium text-xs sm:text-sm mb-4">Complete Google Flutter App Developed in Just Hours 2 on 02/08/2025</p>
+                                <a href="https://www.udemy.com/certificate/UC-6790ca8a-502d-4104-b35e-94353ced3e02/" target="_blank" class="text-primary text-xs sm:text-sm font-medium flex items-center hover:underline">
                                     View Details
                                     <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
-                            <div class="h-60 overflow-hidden">
-                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-82fe1c42-b208-4312-8899-1b3a19281ba1.jpg?v=1738745280000" 
-                                     alt="Certificate" 
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div class="aspect-[4/3] overflow-hidden">
+                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-82fe1c42-b208-4312-8899-1b3a19281ba1.jpg?v=1738745280000" alt="Flutter Bootcamp Certificate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                             </div>
-                            <div class="p-5">
-                                <h4 class="m-0 mb-2 text-light text-lg">Flutter Bootcamp</h4>
-                                <p class="m-0 text-medium text-sm mb-4"> Flutter Bootcamp: Build Crypto Tracker Application on 02/05/2025 as taught by Sanjay Kumar Das on Udemy</p>
-                                <a href="https://www.udemy.com/certificate/UC-82fe1c42-b208-4312-8899-1b3a19281ba1/" class="text-primary text-sm font-medium flex items-center hover:underline">
-                                    View Details
-                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                          <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
-                            <div class="h-60 overflow-hidden">
-                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-8fae7151-47f6-4806-a57c-830059a734ba.jpg?v=1726663242000" 
-                                     alt="Certificate" 
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            </div>
-                            <div class="p-5">
-                                <h4 class="m-0 mb-2 text-light text-lg"> Flutter SQLite Database</h4>
-                                <p class="m-0 text-medium text-sm mb-4"> Flutter SQLite Database with full project on 09/18/2024 as taught by Mostafa Aboads on Udemy</p>
-                                <a href="https://www.udemy.com/certificate/UC-8fae7151-47f6-4806-a57c-830059a734ba/" class="text-primary text-sm font-medium flex items-center hover:underline">
-                                    View Details
-                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                          <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
-                            <div class="h-60 overflow-hidden">
-                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-94d07e3e-20f8-4bd8-a401-e8a6f2f2c5fb.jpg?v=1733914414000" 
-                                     alt="Certificate" 
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            </div>
-                            <div class="p-5">
-                                <h4 class="m-0 mb-2 text-light text-lg"> Figma for User Interface and User Experience</h4>
-                                <p class="m-0 text-medium text-sm mb-4">Figma for User Interface and User Experience UIUX Design on 12/11/2024 as taught by Sayman Creative Institute on Udemy</p>
-                                <a href="https://www.udemy.com/certificate/UC-94d07e3e-20f8-4bd8-a401-e8a6f2f2c5fb/" class="text-primary text-sm font-medium flex items-center hover:underline">
-                                    View Details
-                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                           <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
-                            <div class="h-60 overflow-hidden">
-                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-0c1004b9-b61b-4faf-9a8f-965a9344e94a.jpg?v=1698394754000" 
-                                     alt="Certificate" 
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            </div>
-                            <div class="p-5">
-                                <h4 class="m-0 mb-2 text-light text-lg"> Java for Beginners - Learn all the Basics of Java </h4>
-                                <p class="m-0 text-medium text-sm mb-4"> Java for Beginners - Learn all the Basics of Java on 10/27/2023 as taught by Yassin Marco MBA on Udemy</p>
-                                <a href="https://www.udemy.com/certificate/UC-0c1004b9-b61b-4faf-9a8f-965a9344e94a/" class="text-primary text-sm font-medium flex items-center hover:underline">
-                                    View Details
-                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                           <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
-                            <div class="h-60 overflow-hidden">
-                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-d08d118d-dc27-4f5a-b829-8e57feffd576.jpg?v=1719304952000" 
-                                     alt="Certificate" 
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            </div>
-                            <div class="p-5">
-                                <h4 class="m-0 mb-2 text-light text-lg">Dart & Flutter | The Complete Flutter Development Course</h4>
-                                <p class="m-0 text-medium text-sm mb-4">  Dart & Flutter | The Complete Flutter Development Course on 06/25/2024 as taught by Hussain Mustafa</p>
-                                <a href="https://www.udemy.com/certificate/UC-d08d118d-dc27-4f5a-b829-8e57feffd576/" class="text-primary text-sm font-medium flex items-center hover:underline">
+                            <div class="p-3 sm:p-5">
+                                <h4 class="m-0 mb-2 text-light text-base sm:text-lg">Flutter Bootcamp</h4>
+                                <p class="m-0 text-medium text-xs sm:text-sm mb-4">Flutter Bootcamp: Build Crypto Tracker Application on 02/05/2025</p>
+                                <a href="https://www.udemy.com/certificate/UC-82fe1c42-b208-4312-8899-1b3a19281ba1/" target="_blank" class="text-primary text-xs sm:text-sm font-medium flex items-center hover:underline">
                                     View Details
                                     <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
                                 </a>
                             </div>
                         </div>
                             <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
-                            <div class="h-60 overflow-hidden">
-                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-22f9074f-90b5-4c52-8ff8-56d7b398fa59.jpg?v=1702005409000" 
-                                     alt="Certificate" 
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="aspect-[4/3] overflow-hidden">
+                                    <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-8fae7151-47f6-4806-a57c-830059a734ba.jpg?v=1726663242000" 
+                                         alt="Flutter SQLite Certificate" 
+                                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                </div>
+                                <div class="p-3 sm:p-5">
+                                    <h4 class="m-0 mb-2 text-light text-base sm:text-lg">Flutter SQLite Database</h4>
+                                    <p class="m-0 text-medium text-xs sm:text-sm mb-4">Flutter SQLite Database with Full Project on 09/18/2024</p>
+                                    <a href="https://www.udemy.com/certificate/UC-8fae7151-47f6-4806-a57c-830059a734ba/" target="_blank" class="text-primary text-xs sm:text-sm font-medium flex items-center hover:underline">
+                                        View Details
+                                        <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="p-5">
-                                <h4 class="m-0 mb-2 text-light text-lg">Build laravel apps fast with blueprint</h4>
-                                <p class="m-0 text-medium text-sm mb-4">Build laravel apps fast with blueprint on 12/08/2023 as taught by Hazem nassar on Udemy</p>
-                                <a href="https://www.udemy.com/certificate/UC-22f9074f-90b5-4c52-8ff8-56d7b398fa59/" class="text-primary text-sm font-medium flex items-center hover:underline">
-                                    View Details
-                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                             <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
-                            <div class="h-60 overflow-hidden">
-                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-29a6e4e5-399b-4726-b7cf-a21fef3ceb77.jpg?v=1702004048000" 
-                                     alt="Certificate" 
-                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            </div>
-                            <div class="p-5">
-                                <h4 class="m-0 mb-2 text-light text-lg">Javascript For Beginners Complete Course </h4>
-                                <p class="m-0 text-medium text-sm mb-4"> Javascript For Beginners Complete Course on 12/08/2023 as taught by PROPER DOT INSTITUTE on Udemy</p>
-                                <a href="https://www.udemy.com/certificate/UC-29a6e4e5-399b-4726-b7cf-a21fef3ceb77/" class="text-primary text-sm font-medium flex items-center hover:underline">
-                                    View Details
-                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
+                                <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
+                                    <div class="aspect-[4/3] overflow-hidden">
+                                        <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-94d07e3e-20f8-4bd8-a401-e8a6f2f2c5fb.jpg?v=1733914414000" 
+                                             alt="Figma UI/UX Certificate" 
+                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                        </div>
+                                        <div class="p-3 sm:p-5">
+                                            <h4 class="m-0 mb-2 text-light text-base sm:text-lg">Figma UI/UX Design</h4>
+                                            <p class="m-0 text-medium text-xs sm:text-sm mb-4">Figma for User Interface and User Experience UIUX Design on 12/11/2024</p>
+                                            <a href="https://www.udemy.com/certificate/UC-94d07e3e20-f8a401-20f8-4bd8-e8a6f2f2c5fb/" target="_blank" class="text-primary text-xs sm:text-sm font-medium flex items-center hover:underline">
+                                                View Details
+                                                <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                        <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden">
+                                            <div class="aspect-[4/3] overflow-hidden">
+                                                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-0c1004b9-b61b-4faf-9a8f-965a9344e94a.jpg?v=1698394754000" 
+                                                     alt="Java Beginners Certificate" 
+                                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                                </div>
+                                            <div class="p-3 sm:p-5">
+                                                <h4 class="m-0 mb-2 text-light text-base sm:text-lg">Java</h4>
+                                                <p class="m-0 text-medium text-xs sm:text-sm mb-4">Java for Beginners - Learn all the Basics of Java on 10/27/2023</p>
+                                                <a href="https://www.udemy.com/certificate/UC-0c1004b9-b61b-4faf-9a8f-965a9344e94a/" target="_blank" class="text-primary text-xs sm:text-sm font-medium flex items-center hover:underline">
+                                                    View Details
+                                                    <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
+                                        <div class="aspect-[4/3] overflow-hidden">
+                                            <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-d08d118d-dc27-4f5a-b829-8e57feffd576.jpg?v=1719304952000" 
+                                                 alt="Dart & Flutter Certificate" 
+                                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                            </div>
+                                        <div class="p-3 sm:p-5">
+                                            <h4 class="m-0 mb-2 text-light text-base sm:text-lg">Dart & Flutter</h4>
+                                            <p class="m-0 text-medium text-xs sm:text-sm mb-4">Dart & Flutter: The Complete Flutter Development Course on 06/25/2024</p>
+                                            <a href="https://www.udemy.com/certificate/UC-d08d118d-dc27-4f5a-b829-8e57feffd576/" target="_blank" class="text-primary text-xs sm:text-sm font-medium flex items-center hover:underline">
+                                                View Details
+                                                <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
+                                    <div class="aspect-[4/3] overflow-hidden">
+                                        <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-22f9074f-90b5-4c52-8ff8-56d7b398fa59.jpg?v=1702005409000" 
+                                             alt="Laravel Blueprint Certificate" 
+                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                        </div>
+                                    <div class="p-3 sm:p-5">
+                                        <h4 class="m-0 mb-2 text-light text-base sm:text-lg">Laravel with Blueprint</h4>
+                                        <p class="m-0 text-medium text-xs sm:text-sm mb-4">Build Laravel Apps Fast with Blueprint on 12/08/2023</p>
+                                        <a href="https://www.udemy.com/certificate/UC-22f9074f-90b5-4c52-8ff8-56d7b398fa59/" target="_blank" class="text-primary text-xs sm:text-sm font-medium flex items-center hover:underline">
+                                            View Details
+                                            <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            <div class="article-card bg-darkAccent/70 rounded-lg transition-all duration-300 border border-white/5 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg group animate-fade-in">
+                                <div class="aspect-[4/3] overflow-hidden">
+                                    <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-29a6e4e5-399b-4726-b7cf-a21fef3ceb77.jpg?v=1702004048000" 
+                                         alt="JavaScript Beginners Certificate" 
+                                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                <div class="p-3 sm:p-5">
+                                    <h4 class="m-0 mb-2 text-light text-base sm:text-lg">JavaScript for Beginners</h4>
+                                    <p class="m-0 text-medium text-xs sm:text-sm mb-4">JavaScript for Beginners Complete Course on 12/08/2023</p>
+                                    <a href="https://www.udemy.com/certificate/UC-29a6e4e5-399b-4726-b7cf-a21fef3ceb77/" target="_blank" class="text-primary text-xs sm:text-sm font-medium flex items-center hover:underline">
+                                        View Details
+                                        <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             
             <!-- Footer -->
-            <div class="text-center text-xs text-medium mt-8">
+            <div class="text-center text-xs sm:text-sm text-medium mt-8 sm:mt-12">
                 <p>© 2025 Ly Kimhab</p>
                 <p>All rights reserved</p>
             </div>
         </div>
     </div>
 
-    <script src="/myportfolio/js/blogdetail.js"></script>
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking a tab
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Set active tab based on current page
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab');
+            const currentPath = window.location.pathname.split('/').pop() || 'Resume.html';
+
+            tabs.forEach(tab => {
+                const tabPath = tab.getAttribute('href').split('/').pop();
+                if (tabPath === currentPath) {
+                    tab.classList.add('active', 'bg-primary/10', 'text-primary');
+                } else {
+                    tab.classList.remove('active', 'bg-primary/10', 'text-primary');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
